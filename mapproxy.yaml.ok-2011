@@ -21,7 +21,7 @@ layers:
     title: Open Streetmap Tiles
     sources: [osm_cache] #this layer should use the osm_cache (defined below) as it's source.
   - name: dgu1
-    title: DGU Hrvatska DOF 2019
+    title: DGU Hrvatska DOF 2011?
     sources: [dgu_cache]
     
 caches:
