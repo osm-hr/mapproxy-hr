@@ -114,13 +114,13 @@ sources:
   dgu_wms_2019:
     type: wms
     req:
-      url: https//geoportal.dgu.hr/services/inspire/orthophoto_2019/ows?
+      url: https://geoportal.dgu.hr/services/inspire/orthophoto_2019/ows?
       layers: OI.OrthoimageCoverage
 
   dgu_wms_2018:
     type: wms
     req:
-      url: https//geoportal.dgu.hr/services/inspire/orthophoto_2018/ows?
+      url: https://geoportal.dgu.hr/services/inspire/orthophoto_2018/ows?
       layers: OI.OrthoImagery
 
   dgu_wms_2017:
