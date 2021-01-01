@@ -11,52 +11,144 @@ services:
     image_formats: ['image/jpeg', 'image/png']
     md:
       # metadata used in capabilities documents
-      title: MapProxy WMS Proxy
-      abstract: This is the fantastic MapProxy.
+      title: MapProxy WMS Proxy for HR
+      abstract: This is the MapProxy for Croatian Layers.
       fees: 'None'
+
 
 layers:
   #sets up which layers you want to make available using the services above. You can add many, but let's stick to osm data here.
   - name: osm
-    title: Open Streetmap Tiles
+    title: Open Streetmap Tiles (test)
     sources: [osm_cache] #this layer should use the osm_cache (defined below) as it's source.
+
   - name: dgu_2019
-    title: DGU Hrvatska DOF 2019 South+East Aerial imagery
+    title: dgu.hr - Croatia 2019 South+East Aerial imagery
     sources: [dgu_cache_2019]
+
   - name: dgu_2018
-    title: DGU Hrvatska DOF 2018 West Aerial imagery
+    title: dgu.hr - Croatia 2018 West Aerial imagery
     sources: [dgu_cache_2018]
-    
+
+  - name: dgu_2017
+    title: dgu.hr - Croatia 2017 South+East Aerial imagery
+    sources: [dgu_cache_2017]
+
+  - name: dgu_2014_2016
+    title: dgu.hr - Croatia 2014-2016 Aerial imagery
+    sources: [dgu_cache_2014_2016]
+
+  - name: dgu_2011
+    title: dgu.hr - Croatia 2011 Aerial imagery
+    sources: [dgu_cache_2011]
+
+  - name: dgu_TK25_NOVI
+    title: dgu.hr - Topo 25 new
+    sources: [dgu_cache_TK25_NOVI]
+
+  - name: dgu_TK_25
+    title: dgu.hr - Topo 25
+    sources: [dgu_cache_TK_25]
+
+  - name: dgu_HOK
+    title: dgu.hr - HOK
+    sources: [dgu_cache_HOK]
+
+
 caches:
   #setup the cache for the open streetmap tiles. This cache is used by the layer above.
   osm_cache:
     sources: [osm_tiles] #here you set what source data (defined below) you want to cache
     format: image/png
+
   dgu_cache_2019:
-    sources: [dgu_wms_2019] #here you set what source data (defined below) you want to cache
+    sources: [dgu_wms_2019]
     format: image/jpeg
+
   dgu_cache_2018:
-    sources: [dgu_wms_2018] #here you set what source data (defined below) you want to cache
+    sources: [dgu_wms_2018]
     format: image/jpeg
-  
+
+  dgu_cache_2017:
+    sources: [dgu_wms_2017]
+    format: image/jpeg
+
+  dgu_cache_2014_2016:
+    sources: [dgu_wms_2014_2016]
+    format: image/jpeg
+
+  dgu_cache_2011:
+    sources: [dgu_wms_2011]
+    format: image/jpeg
+
+  dgu_cache_TK25_NOVI:
+    sources: [dgu_wms_TK25_NOVI]
+    format: image/png
+
+  dgu_cache_TK_25:
+    sources: [dgu_wms_TK_25]
+    format: image/png
+
+  dgu_cache_HOK:
+    sources: [dgu_wms_HOK]
+    format: image/png
+
+
+
 sources:
   osm_tiles:
      #the osm_tiles source refers to the openstreetmap.org tiles. These will be downloaded upon request (if not already cached) and served by MapProxy
      type: tile
      url: http://c.tile.openstreetmap.org/%(tms_path)s.%(format)s
      grid: osm_grid #the grid to use for the osm tiles. This is really important. It is specified below.
+
   dgu_wms_2019:
     type: wms
     req:
-      url: http://geoportal.dgu.hr/services/inspire/orthophoto_2019/ows?
-      #wms:https://geoportal.dgu.hr/services/inspire/orthophoto_2019/ows?FORMAT=image/png&TRANSPARENT=TRUE&VERSION=1.3.0&SERVICE=WMS&REQUEST=GetMap&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS={proj}&WIDTH={width}&HEIGHT={height}&BBOX={bbox}
+      url: https//geoportal.dgu.hr/services/inspire/orthophoto_2019/ows?
       layers: OI.OrthoimageCoverage
+
   dgu_wms_2018:
     type: wms
     req:
-      url: http://geoportal.dgu.hr/services/inspire/orthophoto_2018/ows?
-      #wms:https://geoportal.dgu.hr/services/inspire/orthophoto_2018/ows?SERVICE=WMS&FORMAT=image/png&TRANSPARENT=TRUE&VERSION=1.1.1&SERVICE=WMS&REQUEST=GetMap&LAYERS=OI.OrthoImagery&STYLES=&SRS={proj}&WIDTH={width}&HEIGHT={height}&BBOX={bbox}
+      url: https//geoportal.dgu.hr/services/inspire/orthophoto_2018/ows?
       layers: OI.OrthoImagery
+
+  dgu_wms_2017:
+    type: wms
+    req:
+      url: https://geoportal.dgu.hr/services/inspire/orthophoto_2017/ows?
+      layers: OI.OrthoImagery
+
+  dgu_wms_2014_2016:
+    type: wms
+    req:
+      url: https://geoportal.dgu.hr/services/inspire/orthophoto_2014-2016/ows?
+      layers: OI.OrthoImagery
+
+  dgu_wms_2011:
+    type: wms
+    req:
+      url: https://geoportal.dgu.hr/services/dof/ows?
+      layers: DOF5_2011
+
+  dgu_wms_TK25_NOVI:
+    type: wms
+    req:
+      url: https://geoportal.dgu.hr/services/tk/ows?
+      layers: tk:TK25_NOVI
+
+  dgu_wms_TK_25:
+    type: wms
+    req:
+      url: https://geoportal.dgu.hr/services/tk/ows?
+      layers: tk:TK25
+
+  dgu_wms_HOK:
+    type: wms
+    req:
+      url: https://geoportal.dgu.hr/services/hok/ows?
+      layers: HOK5
 
 grids:
   osm_grid:
