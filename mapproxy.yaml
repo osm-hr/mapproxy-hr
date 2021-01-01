@@ -187,6 +187,7 @@ globals:
   # image/transformation options
   image:
       resampling_method: bilinear
+      paletted: false
       #jpeg_quality: 90
       formats:
         image/png:
