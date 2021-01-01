@@ -10,8 +10,8 @@ Local caching / faster loading of Croatian WMS
   - click `3. Get Layers`
   - check box `Store WMS endpoint only, select layers at usage` under `4. Select layers`
   - enter `dgu.hr mapproxy` under `7. Enter name for this layer`
-  - click OK
-  - click OK
+  - click `OK`
+  - click `OK`
 
 # TODO:
 - find out how to setup/use as TMS as separate layers
