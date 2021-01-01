@@ -60,38 +60,47 @@ caches:
   osm_cache:
     sources: [osm_tiles] #here you set what source data (defined below) you want to cache
     format: image/png
+    grids: [webmercator_hr]
 
   dgu_cache_2019:
     sources: [dgu_wms_2019]
     format: image/jpeg
+    grids: [webmercator_hr]
 
   dgu_cache_2018:
     sources: [dgu_wms_2018]
     format: image/jpeg
+    grids: [webmercator_hr]
 
   dgu_cache_2017:
     sources: [dgu_wms_2017]
     format: image/jpeg
+    grids: [webmercator_hr]
 
   dgu_cache_2014_2016:
     sources: [dgu_wms_2014_2016]
     format: image/jpeg
+    grids: [webmercator_hr]
 
   dgu_cache_2011:
     sources: [dgu_wms_2011]
     format: image/jpeg
+    grids: [webmercator_hr]
 
   dgu_cache_TK25_NOVI:
     sources: [dgu_wms_TK25_NOVI]
     format: image/png
+    grids: [webmercator_hr]
 
   dgu_cache_TK_25:
     sources: [dgu_wms_TK_25]
     format: image/png
+    grids: [webmercator_hr]
 
   dgu_cache_HOK:
     sources: [dgu_wms_HOK]
     format: image/png
+    grids: [webmercator_hr]
 
 
 
@@ -132,6 +141,7 @@ sources:
       url: https://geoportal.dgu.hr/services/dof/ows?
       layers: DOF5_2011
 
+
   dgu_wms_TK25_NOVI:
     type: wms
     req:
@@ -157,8 +167,10 @@ grids:
     srs: EPSG:3857
     origin: nw
 
-  webmercator:
+  webmercator_hr:
     base: GLOBAL_WEBMERCATOR
+    bbox: [12.5, 41.5, 20, 47]	# approx. limit to Croatia
+    bbox_srs: 'EPSG:4326'
 
 globals:
   #next are some global configuration options for MapProxy. They mostly explain themselves, or can be looked-up in the MapProxy docs.
@@ -167,9 +179,15 @@ globals:
     base_dir: './cache_data'
     # where to store lockfiles
     lock_dir: './cache_data/locks'
+    tile_lock_dir: './cache_data/tile_locks'
 
+  tiles:
+    expires_hours: 8760		# cache for a year
 
   # image/transformation options
   image:
       resampling_method: bilinear
       jpeg_quality: 90
+      formats:
+        image/png:
+          transparent: true
