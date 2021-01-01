@@ -18,7 +18,7 @@ services:
 
 layers:
   #sets up which layers you want to make available using the services above. You can add many, but let's stick to osm data here.
-  - name: osm
+  - name: osm_demo
     title: Open Streetmap Tiles (test)
     sources: [osm_cache] #this layer should use the osm_cache (defined below) as it's source.
 
