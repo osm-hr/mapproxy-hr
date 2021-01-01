@@ -7,7 +7,7 @@ services:
     origin: 'nw'
   wms:
     #srs sets the coordinate reference systems as which you want to make your data available. MapProxy reprojects the source data very well to these projections.
-    srs: ['EPSG:900913','EPSG:3857']
+    srs: ['EPSG:3857']
     image_formats: ['image/jpeg', 'image/png']
     md:
       # metadata used in capabilities documents
@@ -154,7 +154,7 @@ grids:
   osm_grid:
     #this srs and origin specify a grid that can be used elsewhere in the configuration. In this example it is used for the osm_tiles source. These settings are correct for openstreetmap.org tiles.
     #The google mercator srs is used (also called EPSG:900913), and the origin of the tiles is north-west). If you get this wrong, you might very well get an all-blue world.
-    srs: EPSG:900913
+    srs: EPSG:3857
     origin: nw
 
   webmercator:
