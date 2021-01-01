@@ -2,6 +2,7 @@
 
 Local caching / faster loading of Croatian WMS
 
+- run `sudo apt-get install mapproxy`
 - run `./runme.sh`
 - in JOSM:
   - go to Imagery / Imagery preferences / +WMS
@@ -11,3 +12,6 @@ Local caching / faster loading of Croatian WMS
   - enter `dgu.hr mapproxy` under `7. Enter name for this layer"
   - click OK
   - click OK
+
+# TODO:
+- find out how to setup/use as TMS as separate layers
