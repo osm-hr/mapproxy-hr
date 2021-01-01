@@ -11,7 +11,7 @@ services:
     image_formats: ['image/jpeg', 'image/png']
     md:
       # metadata used in capabilities documents
-      title: MapProxy WMS Proxy for HR
+      title: dgu.hr (mapproxy)
       abstract: This is the MapProxy for Croatian Layers.
       fees: 'None'
 
