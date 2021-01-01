@@ -20,18 +20,24 @@ layers:
   - name: osm
     title: Open Streetmap Tiles
     sources: [osm_cache] #this layer should use the osm_cache (defined below) as it's source.
-  - name: dgu1
-    title: DGU Hrvatska DOF 2019
-    sources: [dgu_cache]
+  - name: dgu_2019
+    title: DGU Hrvatska DOF 2019 South+East Aerial imagery
+    sources: [dgu_cache_2019]
+  - name: dgu_2018
+    title: DGU Hrvatska DOF 2018 West Aerial imagery
+    sources: [dgu_cache_2018]
     
 caches:
   #setup the cache for the open streetmap tiles. This cache is used by the layer above.
   osm_cache:
     sources: [osm_tiles] #here you set what source data (defined below) you want to cache
     format: image/png
-  dgu_cache:
-    sources: [dgu_wms] #here you set what source data (defined below) you want to cache
-    format: image/png
+  dgu_cache_2019:
+    sources: [dgu_wms_2019] #here you set what source data (defined below) you want to cache
+    format: image/jpeg
+  dgu_cache_2018:
+    sources: [dgu_wms_2018] #here you set what source data (defined below) you want to cache
+    format: image/jpeg
   
 sources:
   osm_tiles:
@@ -39,16 +45,18 @@ sources:
      type: tile
      url: http://c.tile.openstreetmap.org/%(tms_path)s.%(format)s
      grid: osm_grid #the grid to use for the osm tiles. This is really important. It is specified below.
-  dgu_wms:
+  dgu_wms_2019:
     type: wms
     req:
-      # use of this source is only permitted for testing
-      #url: http://osm.omniscale.net/proxy/service?
-      #url: http://geoportal.dgu.hr/ows?
-      #layers: DOF
       url: http://geoportal.dgu.hr/services/inspire/orthophoto_2019/ows?
-      #FORMAT=image/png&TRANSPARENT=TRUE&VERSION=1.3.0&SERVICE=WMS&REQUEST=GetMap&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS={proj}&WIDTH={width}&HEIGHT={height}&BBOX={bbox}
+      #wms:https://geoportal.dgu.hr/services/inspire/orthophoto_2019/ows?FORMAT=image/png&TRANSPARENT=TRUE&VERSION=1.3.0&SERVICE=WMS&REQUEST=GetMap&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS={proj}&WIDTH={width}&HEIGHT={height}&BBOX={bbox}
       layers: OI.OrthoimageCoverage
+  dgu_wms_2018:
+    type: wms
+    req:
+      url: http://geoportal.dgu.hr/services/inspire/orthophoto_2018/ows?
+      #wms:https://geoportal.dgu.hr/services/inspire/orthophoto_2018/ows?SERVICE=WMS&FORMAT=image/png&TRANSPARENT=TRUE&VERSION=1.1.1&SERVICE=WMS&REQUEST=GetMap&LAYERS=OI.OrthoImagery&STYLES=&SRS={proj}&WIDTH={width}&HEIGHT={height}&BBOX={bbox}
+      layers: OI.OrthoImagery
 
 grids:
   osm_grid:
