@@ -15,3 +15,5 @@ Local caching / faster loading of Croatian WMS
 
 # TODO:
 - find out how to setup/use as TMS as separate layers
+  tms:http://localhost:8080/tiles/1.0.0/osm_demo/webmercator_hr/{zoom}/{x}/{y}.png
+  tms:http://localhost:8080/tiles/1.0.0/dgu_2011/webmercator_hr/{zoom}/{x}/{y}.png

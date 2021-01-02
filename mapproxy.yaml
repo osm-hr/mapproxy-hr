@@ -54,7 +54,6 @@ layers:
     title: dgu.hr - HOK
     sources: [dgu_cache_HOK]
 
-
 caches:
   #setup the cache for the open streetmap tiles. This cache is used by the layer above.
   osm_cache:
@@ -109,7 +108,10 @@ sources:
     #the osm_tiles source refers to the openstreetmap.org tiles. These will be downloaded upon request (if not already cached) and served by MapProxy
     type: tile
     url: http://c.tile.openstreetmap.org/%(tms_path)s.%(format)s
-    grid: osm_grid #the grid to use for the osm tiles. This is really important. It is specified below.
+    grid: webmercator_hr
+    #grid: osm_grid #the grid to use for the osm tiles. This is really important. It is specified below.
+    #url: http://c.tile.openstreetmap.org/%(z)s/%(x)s/%(y)s.png
+    #grid: GLOBAL_WEBMERCATOR
 
   dgu_wms_2019:
     type: wms
@@ -140,6 +142,10 @@ sources:
     req:
       url: https://geoportal.dgu.hr/services/dof/ows?
       layers: DOF5_2011
+    #coverage:
+      #bbox: [12.5, 41.5, 20, 47]	# approx. limit to Croatia
+      #bbox_srs: 'EPSG:4326'
+      #bbox_srs: 'EPSG:3857'
 
 
   dgu_wms_TK25_NOVI:
@@ -160,6 +166,7 @@ sources:
       url: https://geoportal.dgu.hr/services/hok/ows?
       layers: HOK5
 
+
 grids:
   osm_grid:
     #this srs and origin specify a grid that can be used elsewhere in the configuration. In this example it is used for the osm_tiles source. These settings are correct for openstreetmap.org tiles.
@@ -169,8 +176,11 @@ grids:
 
   webmercator_hr:
     base: GLOBAL_WEBMERCATOR
-    bbox: [12.5, 41.5, 20, 47]	# approx. limit to Croatia
-    bbox_srs: 'EPSG:4326'
+    #bbox: [12.5, 41.5, 20, 47]	# approx. limit to Croatia
+      #bbox_srs: 'EPSG:4326'
+    #bbox_srs: 'EPSG:3857'
+
+
 
 globals:
   #next are some global configuration options for MapProxy. They mostly explain themselves, or can be looked-up in the MapProxy docs.
