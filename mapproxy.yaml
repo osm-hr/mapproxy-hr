@@ -108,10 +108,8 @@ sources:
     #the osm_tiles source refers to the openstreetmap.org tiles. These will be downloaded upon request (if not already cached) and served by MapProxy
     type: tile
     url: http://c.tile.openstreetmap.org/%(tms_path)s.%(format)s
-    grid: webmercator_hr
-    #grid: osm_grid #the grid to use for the osm tiles. This is really important. It is specified below.
     #url: http://c.tile.openstreetmap.org/%(z)s/%(x)s/%(y)s.png
-    #grid: GLOBAL_WEBMERCATOR
+    grid: webmercator_hr
 
   dgu_wms_2019:
     type: wms
@@ -168,11 +166,11 @@ sources:
 
 
 grids:
-  osm_grid:
+  #osm_grid:
     #this srs and origin specify a grid that can be used elsewhere in the configuration. In this example it is used for the osm_tiles source. These settings are correct for openstreetmap.org tiles.
     #The google mercator srs is used (also called EPSG:900913), and the origin of the tiles is north-west). If you get this wrong, you might very well get an all-blue world.
-    srs: EPSG:3857
-    origin: nw
+    #srs: EPSG:3857
+    #origin: nw
 
   webmercator_hr:
     base: GLOBAL_WEBMERCATOR

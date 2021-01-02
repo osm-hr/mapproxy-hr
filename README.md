@@ -34,6 +34,8 @@ Local caching / faster loading of Croatian WMS
   http://localhost:8080/tiles/1.0.0/dgu_TK_25/webmercator_hr/{zoom}/{x}/{y}.png
 - dgu.hr: Topo 25 new
   http://localhost:8080/tiles/1.0.0/dgu_TK25_NOVI/webmercator_hr/{zoom}/{x}/{y}.png
+- OSM tiles MapProxy demo
+  http://localhost:8080/tiles/1.0.0/osm_demo/webmercator_hr/{zoom}/{x}/{y}.png
 
 
 
