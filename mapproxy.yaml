@@ -8,7 +8,7 @@ services:
   wms:
     #srs sets the coordinate reference systems as which you want to make your data available. MapProxy reprojects the source data very well to these projections.
     srs: ['EPSG:3857']
-    image_formats: ['image/png']
+    image_formats: ['image/jpeg', 'image/png']
     md:
       # metadata used in capabilities documents
       title: dgu.hr (mapproxy)
@@ -63,27 +63,27 @@ caches:
 
   dgu_cache_2019:
     sources: [dgu_wms_2019]
-    format: image/png
+    format: image/jpeg
     grids: [webmercator_hr]
 
   dgu_cache_2018:
     sources: [dgu_wms_2018]
-    format: image/png
+    format: image/jpeg
     grids: [webmercator_hr]
 
   dgu_cache_2017:
     sources: [dgu_wms_2017]
-    format: image/png
+    format: image/jpeg
     grids: [webmercator_hr]
 
   dgu_cache_2014_2016:
     sources: [dgu_wms_2014_2016]
-    format: image/png
+    format: image/jpeg
     grids: [webmercator_hr]
 
   dgu_cache_2011:
     sources: [dgu_wms_2011]
-    format: image/png
+    format: image/jpeg
     grids: [webmercator_hr]
 
   dgu_cache_TK25_NOVI:
@@ -197,7 +197,7 @@ globals:
   # image/transformation options
   image:
       resampling_method: bilinear
-      paletted: false
+      #paletted: false
       #jpeg_quality: 90
       formats:
         image/png:
