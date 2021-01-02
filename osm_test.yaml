@@ -1,0 +1,50 @@
+services:
+  #sets up how to make the source data available
+  demo:
+  tms:
+    use_grid_names: true
+    # origin for /tiles service
+    origin: 'nw'
+  wms:
+    #srs sets the coordinate reference systems as which you want to make your data available. MapProxy reprojects the source data very well to these projections.
+    srs: ['EPSG:3857']
+    image_formats: ['image/png']
+    md:
+      # metadata used in capabilities documents
+      title: Mapproxy OSM cache
+      abstract: This is the MapProxy
+      fees: 'None'
+
+
+layers:
+  #sets up which layers you want to make available using the services above. You can add many, but let's stick to osm data here.
+  - name: osm_demo	# access in JOSM as TMS: http://localhost:8080/tiles/1.0.0/osm_demo/webmercator/{zoom}/{x}/{y}.png
+    title: Open Streetmap Tiles (test)
+    sources: [osm_cache]
+
+caches:
+  #setup the cache for the open streetmap tiles. This cache is used by the layer above.
+  osm_cache:
+    sources: [osm_tiles]
+    format: image/png
+    grids: [webmercator]
+
+sources:
+  osm_tiles:
+    #the osm_tiles source refers to the openstreetmap.org tiles. These will be downloaded upon request (if not already cached) and served by MapProxy
+    type: tile
+    url: http://c.tile.openstreetmap.org/%(tms_path)s.%(format)s
+    grid: webmercator
+
+grids:
+  webmercator:
+    base: GLOBAL_WEBMERCATOR
+
+globals:
+  #next are some global configuration options for MapProxy. They mostly explain themselves, or can be looked-up in the MapProxy docs.
+  cache:
+    # where to store the cached images
+    base_dir: './cache_data'
+    # where to store lockfiles
+    lock_dir: './cache_data/locks'
+
