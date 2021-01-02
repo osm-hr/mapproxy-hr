@@ -19,23 +19,23 @@ Local caching / faster loading of Croatian WMS
 
 ## List of layers and TMS URLs
 - dgu.hr: Croatia 2011 Aerial imagery
-  http://localhost:8080/tiles/1.0.0/dgu_2011/webmercator_hr/{zoom}/{x}/{y}.jpeg
+  `http://localhost:8080/tiles/1.0.0/dgu_2011/webmercator_hr/{zoom}/{x}/{y}.jpeg`
 - dgu.hr: Croatia 2014-2016 Aerial imagery
-  http://localhost:8080/tiles/1.0.0/dgu_2014_2016/webmercator_hr/{zoom}/{x}/{y}.jpeg
+  `http://localhost:8080/tiles/1.0.0/dgu_2014_2016/webmercator_hr/{zoom}/{x}/{y}.jpeg`
 - dgu.hr: Croatia 2017 South+East Aerial imagery
-  http://localhost:8080/tiles/1.0.0/dgu_2017/webmercator_hr/{zoom}/{x}/{y}.jpeg
+  `http://localhost:8080/tiles/1.0.0/dgu_2017/webmercator_hr/{zoom}/{x}/{y}.jpeg`
 - dgu.hr: Croatia 2018 West Aerial imagery
-  http://localhost:8080/tiles/1.0.0/dgu_2018/webmercator_hr/{zoom}/{x}/{y}.jpeg
+  `http://localhost:8080/tiles/1.0.0/dgu_2018/webmercator_hr/{zoom}/{x}/{y}.jpeg`
 - dgu.hr: Croatia 2019 South+East Aerial imagery
-  http://localhost:8080/tiles/1.0.0/dgu_2019/webmercator_hr/{zoom}/{x}/{y}.jpeg
+  `http://localhost:8080/tiles/1.0.0/dgu_2019/webmercator_hr/{zoom}/{x}/{y}.jpeg`
 - dgu.hr: HOK
-  http://localhost:8080/tiles/1.0.0/dgu_HOK/webmercator_hr/{zoom}/{x}/{y}.png
+  `http://localhost:8080/tiles/1.0.0/dgu_HOK/webmercator_hr/{zoom}/{x}/{y}.png`
 - dgu.hr: Topo 25
-  http://localhost:8080/tiles/1.0.0/dgu_TK_25/webmercator_hr/{zoom}/{x}/{y}.png
+  `http://localhost:8080/tiles/1.0.0/dgu_TK_25/webmercator_hr/{zoom}/{x}/{y}.png`
 - dgu.hr: Topo 25 new
-  http://localhost:8080/tiles/1.0.0/dgu_TK25_NOVI/webmercator_hr/{zoom}/{x}/{y}.png
+  `http://localhost:8080/tiles/1.0.0/dgu_TK25_NOVI/webmercator_hr/{zoom}/{x}/{y}.png`
 - OSM tiles MapProxy demo
-  http://localhost:8080/tiles/1.0.0/osm_demo/webmercator_hr/{zoom}/{x}/{y}.png
+  `http://localhost:8080/tiles/1.0.0/osm_demo/webmercator_hr/{zoom}/{x}/{y}.png`
 
 
 
