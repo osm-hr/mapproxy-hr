@@ -69,3 +69,4 @@ Local caching / faster loading of Croatian WMS
 
 # TODO:
 - setup layer boundaries in a way that doesn't break TMS
+- make a merged (and noncached) layer for 2018+2019
