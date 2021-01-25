@@ -115,30 +115,35 @@ sources:
     type: wms
     req:
       url: https://geoportal.dgu.hr/services/inspire/orthophoto_2019/ows?
+      #url: https://geoportal.dgu.hr/services/auth/inspire/orthophoto_2019/ows?authKey=12345
       layers: OI.OrthoimageCoverage
 
   dgu_wms_2018:
     type: wms
     req:
       url: https://geoportal.dgu.hr/services/inspire/orthophoto_2018/ows?
+      #url:  https://geoportal.dgu.hr/services/auth/inspire/orthophoto_2018/ows?authKey=12345
       layers: OI.OrthoImagery
 
   dgu_wms_2017:
     type: wms
     req:
       url: https://geoportal.dgu.hr/services/inspire/orthophoto_2017/ows?
+      #url: https://geoportal.dgu.hr/services/auth/inspire/orthophoto_2017/ows?authKey=12345
       layers: OI.OrthoImagery
 
   dgu_wms_2014_2016:
     type: wms
     req:
       url: https://geoportal.dgu.hr/services/inspire/orthophoto_2014-2016/ows?
+      #url: https://geoportal.dgu.hr/services/auth/inspire/orthophoto_2014-2016/ows?authKey=12345
       layers: OI.OrthoImagery
 
   dgu_wms_2011:
     type: wms
     req:
       url: https://geoportal.dgu.hr/services/dof/ows?
+      #url: https://geoportal.dgu.hr/services/auth/dof/ows?authKey=12345
       layers: DOF5_2011
     #coverage:
       #bbox: [12.5, 41.5, 20, 47]	# approx. limit to Croatia
