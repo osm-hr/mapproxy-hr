@@ -69,4 +69,6 @@ Local caching / faster loading of Croatian WMS
 
 # TODO:
 - setup layer boundaries in a way that doesn't break TMS
-- make a merged (and noncached) layer for 2018+2019
+- make a merged (and noncached) layer for 2018+2019 (or 2017+2018?)
+- document authenticated WMS with no watermark
+- try to speed up by using WMTS instead of WMS
