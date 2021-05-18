@@ -26,6 +26,10 @@ layers:
     title: dgu.hr - Croatia 2019 South+East Aerial imagery
     sources: [dgu_cache_2019]
 
+  - name: dgu_2017_2018
+    title: dgu.hr - Croatia 2017-2018 Aerial imagery
+    sources: [dgu_cache_2017_2018]
+
   - name: dgu_2018
     title: dgu.hr - Croatia 2018 West Aerial imagery
     sources: [dgu_cache_2018]
@@ -63,6 +67,11 @@ caches:
 
   dgu_cache_2019:
     sources: [dgu_wms_2019]
+    format: image/jpeg
+    grids: [webmercator_hr]
+
+  dgu_cache_2017_2018:
+    sources: [dgu_wms_2017_2018]
     format: image/jpeg
     grids: [webmercator_hr]
 
@@ -117,6 +126,13 @@ sources:
       url: https://geoportal.dgu.hr/services/inspire/orthophoto_2019/ows?
       #url: https://geoportal.dgu.hr/services/auth/inspire/orthophoto_2019/ows?authKey=12345
       layers: OI.OrthoimageCoverage
+
+  dgu_wms_2017_2018:
+    type: wms
+    req:
+      url: https://geoportal.dgu.hr/services/inspire/orthophoto_2017_2018/ows?
+      #url: https://geoportal.dgu.hr/services/auth/inspire/orthophoto_2017-2018/ows?authKey=12345
+      layers: OI.OrthoImagery
 
   dgu_wms_2018:
     type: wms
