@@ -133,7 +133,7 @@ sources:
     type: wms
     req:
       url: https://geoportal.dgu.hr/services/inspire/orthophoto_2019_2020/ows?
-      #url: https://geoportal.dgu.hr/services/auth/inspire/orthophoto_2019-2020/ows?authKey=12345
+      #url: https://geoportal.dgu.hr/services/auth/inspire/orthophoto_2019_2020/ows?authKey=12345
       layers: OI.OrthoimageCoverage
 
   dgu_wms_2019:
@@ -147,7 +147,7 @@ sources:
     type: wms
     req:
       url: https://geoportal.dgu.hr/services/inspire/orthophoto_2017_2018/ows?
-      #url: https://geoportal.dgu.hr/services/auth/inspire/orthophoto_2017-2018/ows?authKey=12345
+      #url: https://geoportal.dgu.hr/services/auth/inspire/orthophoto_2017_2018/ows?authKey=12345
       layers: OI.OrthoImagery
 
   dgu_wms_2018:
