@@ -27,21 +27,9 @@ Local caching / faster loading of Croatian WMS
 
   `http://localhost:8080/tiles/1.0.0/dgu_2014_2016/webmercator_hr/{zoom}/{x}/{y}.jpeg`
   
-- dgu.hr: Croatia 2017 South+East Aerial imagery (mapproxy)
-
-  `http://localhost:8080/tiles/1.0.0/dgu_2017/webmercator_hr/{zoom}/{x}/{y}.jpeg`
-  
-- dgu.hr: Croatia 2018 West Aerial imagery (mapproxy)
-
-  `http://localhost:8080/tiles/1.0.0/dgu_2018/webmercator_hr/{zoom}/{x}/{y}.jpeg`
-  
 - dgu.hr: Croatia 2017-2018 Aerial imagery (mapproxy)
 
   `http://localhost:8080/tiles/1.0.0/dgu_2017_2018/webmercator_hr/{zoom}/{x}/{y}.jpeg`
-  
-- dgu.hr: Croatia 2019 South+East Aerial imagery (mapproxy)
-
-  `http://localhost:8080/tiles/1.0.0/dgu_2019/webmercator_hr/{zoom}/{x}/{y}.jpeg`
   
 - dgu.hr: Croatia 2019-2020 Aerial imagery (mapproxy)
 
