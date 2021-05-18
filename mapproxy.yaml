@@ -22,6 +22,10 @@ layers:
     title: Open Streetmap Tiles (test)
     sources: [osm_cache] #this layer should use the osm_cache (defined below) as it's source.
 
+  - name: dgu_2019_2020
+    title: dgu.hr - Croatia 2019-2020 Aerial imagery
+    sources: [dgu_cache_2019_2020]
+
   - name: dgu_2019
     title: dgu.hr - Croatia 2019 South+East Aerial imagery
     sources: [dgu_cache_2019]
@@ -63,6 +67,11 @@ caches:
   osm_cache:
     sources: [osm_tiles] #here you set what source data (defined below) you want to cache
     format: image/png
+    grids: [webmercator_hr]
+
+  dgu_cache_2019_2020:
+    sources: [dgu_wms_2019_2020]
+    format: image/jpeg
     grids: [webmercator_hr]
 
   dgu_cache_2019:
@@ -119,6 +128,13 @@ sources:
     url: http://c.tile.openstreetmap.org/%(tms_path)s.%(format)s
     #url: http://c.tile.openstreetmap.org/%(z)s/%(x)s/%(y)s.png
     grid: webmercator_hr
+
+  dgu_wms_2019_2020:
+    type: wms
+    req:
+      url: https://geoportal.dgu.hr/services/inspire/orthophoto_2019_2020/ows?
+      #url: https://geoportal.dgu.hr/services/auth/inspire/orthophoto_2019-2020/ows?authKey=12345
+      layers: OI.OrthoimageCoverage
 
   dgu_wms_2019:
     type: wms
