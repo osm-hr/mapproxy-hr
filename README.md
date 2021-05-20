@@ -17,6 +17,8 @@ Local caching / faster loading of Croatian WMS
 - click `OK`
 - repeat for all wanted layers
 
+When adding layers, you may want to click on "eye" icon and increase "Gamma", so imagery is not so washed-out
+
 ## List of layers and TMS URLs
 
 - dgu.hr: Croatia 2011 Aerial imagery (mapproxy)
