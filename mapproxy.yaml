@@ -148,7 +148,7 @@ sources:
     req:
       url: https://geoportal.dgu.hr/services/inspire/orthophoto_2017_2018/ows?
       #url: https://geoportal.dgu.hr/services/auth/inspire/orthophoto_2017_2018/ows?authKey=12345
-      layers: OI.OrthoImagery
+      layers: OI.OrthoimageCoverage
 
   dgu_wms_2018:
     type: wms
