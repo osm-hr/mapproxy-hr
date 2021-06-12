@@ -176,7 +176,8 @@ sources:
     req:
       url: https://geoportal.dgu.hr/services/dof/ows?
       #url: https://geoportal.dgu.hr/services/auth/dof/ows?authKey=12345
-      layers: DOF5_2011
+      layers: DOF5_NOVI
+      #layers: DOF5_2011
     #coverage:
       #bbox: [12.5, 41.5, 20, 47]	# approx. limit to Croatia
       #bbox_srs: 'EPSG:4326'
