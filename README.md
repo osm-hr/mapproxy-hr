@@ -66,7 +66,6 @@ When adding layers, you may want to click on "eye" icon and increase "Gamma", so
 - click `OK`
 
 # TODO:
-- setup layer boundaries in a way that doesn't break TMS
-- make a merged (and noncached) layer for 2018+2019 (or 2017+2018?)
+- (DONE?) setup layer boundaries in a way that doesn't break TMS
 - document authenticated WMS with no watermark
 - try to speed up by using WMTS instead of WMS
