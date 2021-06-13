@@ -135,6 +135,9 @@ sources:
       url: https://geoportal.dgu.hr/services/inspire/orthophoto_2019_2020/ows?
       #url: https://geoportal.dgu.hr/services/auth/inspire/orthophoto_2019_2020/ows?authKey=12345
       layers: OI.OrthoimageCoverage
+    coverage:
+      bbox: [12.7076,41.6049,19.7065,46.5583]		# from geoportal.dgu.hr / Metapodaci
+      bbox_srs: 'EPSG:4326'
 
   dgu_wms_2019:
     type: wms
@@ -142,6 +145,9 @@ sources:
       url: https://geoportal.dgu.hr/services/inspire/orthophoto_2019/ows?
       #url: https://geoportal.dgu.hr/services/auth/inspire/orthophoto_2019/ows?authKey=12345
       layers: OI.OrthoimageCoverage
+    coverage:
+      bbox: [16.329741833450203,41.85529836594651,19.967427497207495,46.939363002882104]	# from geoportal.dgu.hr / Metapodaci: https://geoportal.nipp.hr/geonetwork/srv/hrv/catalog.search#/metadata/7b4412ae-f9b9-40b4-bc83-42e14de34178
+      bbox_srs: 'EPSG:4326'
 
   dgu_wms_2017_2018:
     type: wms
@@ -149,6 +155,9 @@ sources:
       url: https://geoportal.dgu.hr/services/inspire/orthophoto_2017_2018/ows?
       #url: https://geoportal.dgu.hr/services/auth/inspire/orthophoto_2017_2018/ows?authKey=12345
       layers: OI.OrthoimageCoverage
+    coverage:
+      bbox: [13.01,41.62,19.45,46.55]		# from geoportal.dgu.hr / Metapodaci
+      bbox_srs: 'EPSG:4326'
 
   dgu_wms_2018:
     type: wms
@@ -156,6 +165,9 @@ sources:
       url: https://geoportal.dgu.hr/services/inspire/orthophoto_2018/ows?
       #url:  https://geoportal.dgu.hr/services/auth/inspire/orthophoto_2018/ows?authKey=12345
       layers: OI.OrthoImagery
+    coverage:
+      bbox: [12.536174218942529,42.06797417811887,16.462278564586732,46.83872441283675]		# from geoportal.dgu.hr / Metapodaci
+      bbox_srs: 'EPSG:4326'
 
   dgu_wms_2017:
     type: wms
@@ -163,6 +175,9 @@ sources:
       url: https://geoportal.dgu.hr/services/inspire/orthophoto_2017/ows?
       #url: https://geoportal.dgu.hr/services/auth/inspire/orthophoto_2017/ows?authKey=12345
       layers: OI.OrthoImagery
+    coverage:
+      bbox: [16.165605,42.12978,20.05138,46.81305]		# from geoportal.dgu.hr / Metapodaci
+      bbox_srs: 'EPSG:4326'
 
   dgu_wms_2014_2016:
     type: wms
@@ -170,6 +185,9 @@ sources:
       url: https://geoportal.dgu.hr/services/inspire/orthophoto_2014-2016/ows?
       #url: https://geoportal.dgu.hr/services/auth/inspire/orthophoto_2014-2016/ows?authKey=12345
       layers: OI.OrthoImagery
+    coverage:
+      bbox: [13.01,41.62,19.45,46.55]		# from geoportal.dgu.hr / Metapodaci
+      bbox_srs: 'EPSG:4326'
 
   dgu_wms_2011:
     type: wms
@@ -178,10 +196,11 @@ sources:
       #url: https://geoportal.dgu.hr/services/auth/dof/ows?authKey=12345
       #layers: DOF5_NOVI
       layers: DOF5_2011
-    #coverage:
-      #bbox: [12.5, 41.5, 20, 47]	# approx. limit to Croatia
-      #bbox_srs: 'EPSG:4326'
+    coverage:
+      bbox: [13.01,41.62,19.45,46.55]		# from geoportal.dgu.hr / Metapodaci
+      bbox_srs: 'EPSG:4326'
       #bbox_srs: 'EPSG:3857'
+      #bbox_srs: 'EPSG:3765'
 
 
   dgu_wms_TK25_NOVI:
@@ -189,18 +208,27 @@ sources:
     req:
       url: https://geoportal.dgu.hr/services/tk/ows?
       layers: tk:TK25_NOVI
+    coverage:
+      bbox: [13.01,41.62,19.45,46.55]		# from geoportal.dgu.hr / Metapodaci
+      bbox_srs: 'EPSG:4326'
 
   dgu_wms_TK_25:
     type: wms
     req:
       url: https://geoportal.dgu.hr/services/tk/ows?
       layers: tk:TK25
+    coverage:
+      bbox: [13.01,41.62,19.45,46.55]		# from geoportal.dgu.hr / Metapodaci
+      bbox_srs: 'EPSG:4326'
 
   dgu_wms_HOK:
     type: wms
     req:
       url: https://geoportal.dgu.hr/services/hok/ows?
       layers: HOK5
+    coverage:
+      bbox: [13.01,41.62,19.45,46.55]		# from geoportal.dgu.hr / Metapodaci
+      bbox_srs: 'EPSG:4326'
 
 
 grids:
