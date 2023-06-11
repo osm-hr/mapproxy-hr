@@ -22,6 +22,10 @@ layers:
     title: Open Streetmap Tiles (test)
     sources: [osm_cache] #this layer should use the osm_cache (defined below) as it's source.
 
+  - name: dgu_2021_2022
+    title: dgu.hr - Croatia 2021-2022 Aerial imagery
+    sources: [dgu_cache_2021_2022]
+
   - name: dgu_2019_2020
     title: dgu.hr - Croatia 2019-2020 Aerial imagery
     sources: [dgu_cache_2019_2020]
@@ -67,6 +71,11 @@ caches:
   osm_cache:
     sources: [osm_tiles] #here you set what source data (defined below) you want to cache
     format: image/png
+    grids: [webmercator_hr]
+
+  dgu_cache_2021_2022:
+    sources: [dgu_wms_2021_2022]
+    format: image/jpeg
     grids: [webmercator_hr]
 
   dgu_cache_2019_2020:
@@ -137,6 +146,16 @@ sources:
       layers: OI.OrthoimageCoverage
     coverage:
       bbox: [12.7076,41.6049,19.7065,46.5583]		# from geoportal.dgu.hr / Metapodaci
+      bbox_srs: 'EPSG:4326'
+
+  dgu_wms_2021_2022:
+    type: wms
+    req:
+      url: https://geoportal.dgu.hr/services/inspire/orthophoto_2021_2022/ows?
+      #url: https://geoportal.dgu.hr/services/inspire/orthophoto_2021_2022/ows?authKey=12345
+      layers: OI.OrthoimageCoverage
+    coverage:
+      bbox: [12.7076,41.6049,19.7065,46.5583]   # from geoportal.dgu.hr / Metapodaci
       bbox_srs: 'EPSG:4326'
 
   dgu_wms_2019:
