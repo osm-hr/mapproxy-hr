@@ -41,6 +41,10 @@ When adding layers, you may want to click on "eye" icon and increase "Gamma", so
 
   `http://localhost:8080/tiles/1.0.0/dgu_2021_2022/webmercator_hr/{zoom}/{x}/{y}.jpeg`
 
+- dgu.hr: Croatia 2023 South+East Aerial imagery (mapproxy)
+
+  `http://localhost:8080/tiles/1.0.0/dgu_2023/webmercator_hr/{zoom}/{x}/{y}.jpeg`
+
 - dgu.hr: HOK (mapproxy)
 
   `http://localhost:8080/tiles/1.0.0/dgu_HOK/webmercator_hr/{zoom}/{x}/{y}.png`
