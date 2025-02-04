@@ -26,6 +26,10 @@ layers:
     title: dgu.hr - Croatia 2023 South+East Aerial imagery
     sources: [dgu_cache_2023]
 
+  - name: dgu_2022_2023_lidar
+    title: dgu.hr - Croatia 2022-2023 Aerial imagery LiDAR
+    sources: [dgu_cache_2022_2023_lidar]
+
   - name: dgu_2021_2022
     title: dgu.hr - Croatia 2021-2022 Aerial imagery
     sources: [dgu_cache_2021_2022]
@@ -79,6 +83,11 @@ caches:
 
   dgu_cache_2023:
     sources: [dgu_wms_2023]
+    format: image/jpeg
+    grids: [webmercator_hr]
+
+  dgu_cache_2022_2023_lidar:
+    sources: [dgu_wms_2022_2023_lidar]
     format: image/jpeg
     grids: [webmercator_hr]
 
@@ -165,6 +174,16 @@ sources:
       layers: OI.OrthoimageCoverage
     coverage:
       bbox: [15.366475949222318,42.34007771200276,19.195753828425417,46.50756780735698]
+      bbox_srs: 'EPSG:4326'
+
+  dgu_wms_2022_2023_lidar:
+    type: wms
+    req:
+      url: https://geoportal.dgu.hr/services/inspire/orthophoto_lidar_2022_2023/ows?
+      #url: https://geoportal.dgu.hr/services/auth/inspire/orthophoto_lidar_2022_2023/ows?authKey=12345
+      layers: OI.OrthoimageCoverage
+    coverage:
+      bbox: [13.01,41.62,19.45,46.55]   # from geoportal.dgu.hr / Metapodaci
       bbox_srs: 'EPSG:4326'
 
   dgu_wms_2021_2022:
