@@ -163,7 +163,7 @@ sources:
       #url: https://geoportal.dgu.hr/services/inspire/orthophoto_2023_2024/ows?authKey=12345
       layers: OI.OrthoimageCoverage
     coverage:
-      bbox: [12.7076,41.6049,19.7065,46.5583]   # from geoportal.dgu.hr / Metapodaci
+      bbox: [13.414097613555489,42.33152803050663,19.195753828425417,46.507490621044774]   # from ?service=WMS&request=GetCapabilities (see DEVELOPER.md)
       bbox_srs: 'EPSG:4326'
 
   dgu_wms_2022_2023_lidar:
