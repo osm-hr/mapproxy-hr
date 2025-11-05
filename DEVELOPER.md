@@ -38,6 +38,7 @@
    - for `bbox:`, use BoundingBox from step 3
    - for `bbox_srs:` use `EPSG:4326` (that is the same as CRS:84)
 
+   You can check if bounding box looks sane at e.g. http://bboxfinder.com/
 
    e.g.
    ```
