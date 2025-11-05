@@ -22,6 +22,10 @@ layers:
     title: Open Streetmap Tiles (test)
     sources: [osm_cache] #this layer should use the osm_cache (defined below) as it's source.
 
+  - name: dgu_2023_2024
+    title: dgu.hr - Croatia 2023-2024 Aerial imagery
+    sources: [dgu_cache_2023_2024]
+
   - name: dgu_2022_2023_lidar
     title: dgu.hr - Croatia 2022-2023 Aerial imagery LiDAR
     sources: [dgu_cache_2022_2023_lidar]
@@ -75,6 +79,11 @@ caches:
   osm_cache:
     sources: [osm_tiles] #here you set what source data (defined below) you want to cache
     format: image/png
+    grids: [webmercator_hr]
+
+  dgu_cache_2023_2024:
+    sources: [dgu_wms_2023_2024]
+    format: image/jpeg
     grids: [webmercator_hr]
 
   dgu_cache_2022_2023_lidar:
@@ -146,6 +155,16 @@ sources:
     url: http://c.tile.openstreetmap.org/%(tms_path)s.%(format)s
     #url: http://c.tile.openstreetmap.org/%(z)s/%(x)s/%(y)s.png
     grid: webmercator_hr
+
+  dgu_wms_2023_2024:
+    type: wms
+    req:
+      url: https://geoportal.dgu.hr/services/inspire/orthophoto_2023_2024/ows?
+      #url: https://geoportal.dgu.hr/services/inspire/orthophoto_2023_2024/ows?authKey=12345
+      layers: OI.OrthoimageCoverage
+    coverage:
+      bbox: [12.7076,41.6049,19.7065,46.5583]   # from geoportal.dgu.hr / Metapodaci
+      bbox_srs: 'EPSG:4326'
 
   dgu_wms_2022_2023_lidar:
     type: wms
