@@ -82,3 +82,4 @@ When adding layers, you may want to click on "eye" icon and increase "Gamma", so
 - (DONE?) setup layer boundaries in a way that doesn't break TMS
 - document authenticated WMS with no watermark
 - try to speed up by using WMTS instead of WMS
+- beware of possible lower-resultion bug on high-res imagery (Zagreb potres 2020, maybe 2022-2023 Lidar?). Always doublecheck on geoportal.hr if imagery is of  same quality !!!

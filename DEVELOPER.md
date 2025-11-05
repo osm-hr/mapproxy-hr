@@ -52,3 +52,9 @@
         bbox_srs: 'EPSG:4326'
    ```
   
+7. run local mapproxy via `./runme.sh` (needs mapproxy to be installed via `apt install mapproxy`)
+
+8. open http://127.0.0.1:8080/demo/ in web browser, find your layer down in "TMS" section, and click on that layer's `jpeg` link to test.
+   Beware of possible worse resolution (see README.md / TODO for details!)
+
+9. `git commit -a`, `git push` to publish changes
